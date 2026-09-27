@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BrewCafe - Online Cafe Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            ☕ BrewCafe
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 Cart <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                FRESH • HOT • DELICIOUS
+            </p>
+
+            <h1>
+                Your Favourite<br>
+                Coffee, Delivered.
+            </h1>
+
+            <p>
+                Enjoy freshly brewed coffee, tasty snacks
+                and delicious desserts from BrewCafe.
+            </p>
+
+            <a href="#menu" class="hero-btn">
+                Explore Menu
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+
+        <h2>What are you craving?</h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                ☕
+                <h3>Coffee</h3>
+            </div>
+
+            <div class="category">
+                🥪
+                <h3>Snacks</h3>
+            </div>
+
+            <div class="category">
+                🍰
+                <h3>Desserts</h3>
+            </div>
+
+            <div class="category">
+                🥤
+                <h3>Drinks</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+
+        <div class="section-heading">
+
+            <p>OUR MENU</p>
+
+            <h2>Popular Products</h2>
+
+        </div>
+
+
+        <div class="product-container">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    ☕
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category-name">
+                        Coffee
+                    </span>
+
+                    <h3>Cappuccino</h3>
+
+                    <p>
+                        Rich espresso with steamed milk
+                        and creamy foam.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹120
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('Cappuccino', 120)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    🥤
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category-name">
+                        Drinks
+                    </span>
+
+                    <h3>Cold Coffee</h3>
+
+                    <p>
+                        Chilled creamy coffee with
+                        delicious ice.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹140
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('Cold Coffee', 140)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    🥪
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category-name">
+                        Snacks
+                    </span>
+
+                    <h3>Veg Sandwich</h3>
+
+                    <p>
+                        Fresh vegetables, cheese
+                        and toasted bread.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹110
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('Veg Sandwich', 110)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    🍰
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category-name">
+                        Dessert
+                    </span>
+
+                    <h3>Chocolate Cake</h3>
+
+                    <p>
+                        Soft and delicious chocolate
+                        cake with cream.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹160
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('Chocolate Cake', 160)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    🍟
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category-name">
+                        Snacks
+                    </span>
+
+                    <h3>French Fries</h3>
+
+                    <p>
+                        Crispy golden fries served
+                        fresh and hot.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹100
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('French Fries', 100)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    🍵
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category-name">
+                        Drinks
+                    </span>
+
+                    <h3>Green Tea</h3>
+
+                    <p>
+                        Refreshing and healthy green tea
+                        for your day.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₹80
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('Green Tea', 80)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <p class="small-title">
+                ABOUT BREWCAFE
+            </p>
+
+            <h2>
+                Made With Love.<br>
+                Served Fresh.
+            </h2>
+
+            <p>
+                BrewCafe brings your favourite coffee,
+                snacks and desserts right to your doorstep.
+                We focus on freshness, quality and great taste.
+            </p>
+
+            <button class="about-btn">
+                Learn More
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-heading">
+
+            <p>GET IN TOUCH</p>
+
+            <h2>Contact Us</h2>
+
+        </div>
+
+        <div class="contact-container">
+
+            <div>
+                <h3>📍 Location</h3>
+                <p>Davangere, Karnataka</p>
+            </div>
+
+            <div>
+                <h3>📞 Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+
+            <div>
+                <h3>✉️ Email</h3>
+                <p>hello@brewcafe.com</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            ☕ BrewCafe
+        </div>
+
+        <p>
+            © 2026 BrewCafe. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- CART POPUP -->
+    <div class="cart-popup" id="cartPopup">
+
+        <div class="cart-box">
+
+            <button
+                class="close-btn"
+                onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>Your Cart</h2>
+
+            <div id="cartItems">
+                <p>Your cart is empty.</p>
+            </div>
+
+            <div class="cart-total">
+
+                <strong>
+                    Total: ₹<span id="cartTotal">0</span>
+                </strong>
+
+            </div>
+
+            <button class="checkout-btn">
+                Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
